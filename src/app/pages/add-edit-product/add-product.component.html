@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col">
+    <form [formGroup]="productForm" (ngSubmit)="addProduct()" class="mt-2">
+      <h1>Agregar Producto</h1>
+      <mat-form-field class="my-3 col-12">
+<!--        <label class="form-label">Nombre del Producto</label>-->
+        <input type="text" matInput placeholder="Ingrese el nombre del producto" [formControlName]="'nombre'">
+      </mat-form-field>
+      <mat-form-field class="my-3 col-12">
+<!--        <label class="form-label">Precio del Producto</label>-->
+        <input type="number" matInput placeholder="Ingrese el precio del producto" [formControlName]="'precio'">
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit" class="mx-1"> Agregar Producto</button>
+      <button mat-raised-button [color]="'warn'" type="submit" [routerLink]="['/products/lista']"> Cancelar </button>
+    </form>
+  </div>
+</div>

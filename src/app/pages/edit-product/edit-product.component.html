@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col">
+    <form [formGroup]="editForm" (ngSubmit)="editProduct()" class="mt-2">
+      <h1>Editar Producto</h1>
+      <mat-form-field class="my-3 col-12">
+<!--        <label class="form-label">Nombre del Producto</label>-->
+        <input matInput type="text"  placeholder="Ingrese el nombre del producto" [formControlName]="'nombre'">
+      </mat-form-field>
+      <mat-form-field class="my-3 col-12" >
+<!--        <label class="form-label">Precio del Producto</label>-->
+        <input matInput type="number" placeholder="Ingrese el precio del producto" [formControlName]="'precio'">
+      </mat-form-field>
+      <button mat-raised-button [color]="'primary'" type="submit" class="mx-1"> Editar Producto</button>
+      <button mat-raised-button [color]="'warn'" type="submit" [routerLink]="['/products/lista']"> Cancelar </button>
+    </form>
+  </div>
+</div>

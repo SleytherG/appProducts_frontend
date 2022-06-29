@@ -9,6 +9,7 @@ import { AddProductComponent } from './add-edit-product/add-product.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { EditProductComponent } from './edit-product/edit-product.component';
 import {FilterPipe} from "../pipes/filter.pipe";
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 
 
@@ -29,6 +30,7 @@ import {FilterPipe} from "../pipes/filter.pipe";
     PagesRoutingModule,
     ReactiveFormsModule,
     FormsModule,
+    MatProgressSpinnerModule
   ]
 })
 export class PagesModule { }

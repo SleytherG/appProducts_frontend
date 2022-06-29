@@ -4,6 +4,8 @@ import { Router } from '@angular/router';
 import swal from 'sweetalert2';
 import { debounceTime } from 'rxjs';
 import { FormControl } from '@angular/forms';
+import { ThemePalette } from '@angular/material/core';
+import { ProgressSpinnerMode } from '@angular/material/progress-spinner';
 
 @Component({
   selector: 'app-list-products',
@@ -18,6 +20,10 @@ export class ListProductsComponent implements OnInit {
   products: any[] = [];
 
   searchProductControl: FormControl = new FormControl('');
+
+  color: ThemePalette = 'warn';
+  mode: ProgressSpinnerMode = 'indeterminate';
+  value = 10;
 
   constructor(private productService: ProductService, private router: Router) {}
 
